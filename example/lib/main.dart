@@ -37,9 +37,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   void initState() {
-    Telelog.instance.init(
-        apiToken: 'Your api token',
-        usersIds: ['Your user id']);
+    Telelog.instance
+        .init(apiToken: 'Your api token', usersIds: ['Your user id']);
     super.initState();
   }
 

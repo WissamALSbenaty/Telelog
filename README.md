@@ -11,7 +11,11 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
+
+<img src="assets/logo.webp"  width="128" alt="logo"/>
+
 #### A lightweight Flutter package for logging messages directly to a Telegram bot. Easily send logs, debug information, or notifications to your Telegram chats with minimal setup. Ideal for monitoring apps or debugging in real-time.
+
 
 
 ## Motivation
@@ -26,7 +30,7 @@ First , you need to create a bot using [this bot](https://t.me/BotFather) and ge
 then for every user you need to be notified when a new message sent , you need to use [this bot](https://t.me/userinfobot) to get the user id 
 <br>
 
-![](assets/videos/trail.gif)
+![](assets/trail.gif)
 
 ## Usage
 First of all you need to initialize the logger instance
