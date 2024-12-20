@@ -1,6 +1,7 @@
 name: telelog
 description: "A simple flutter package that logs messages to telegram father bot"
-version: 0.0.1+3
+version: 0.0.1+4
+
 
 homepage: https://github.com/WissamALSbenaty/Telelog
 

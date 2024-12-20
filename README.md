@@ -12,7 +12,7 @@ and the Flutter guide for
 -->
 
 
-<img src="assets/logo.png"  width="128" alt="logo"/>
+<img src="https://raw.githubusercontent.com/WissamALSbenaty/Telelog/master/assets/logo.png"  width="128" alt="logo"/>
 
 #### A lightweight Flutter package for logging messages directly to a Telegram bot. Easily send logs, debug information, or notifications to your Telegram chats with minimal setup. Ideal for monitoring apps or debugging in real-time.
 
