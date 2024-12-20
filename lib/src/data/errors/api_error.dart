@@ -1,8 +1,6 @@
 import 'package:telelog/src/data/errors/core_errors.dart';
 import 'package:telelog/src/data/errors/custom_error.dart';
 
-part 'api_error.g.dart';
-
 class ApiError {
   final int statusCode;
   final String apiErrorMessage;
@@ -12,8 +10,10 @@ class ApiError {
     required this.apiErrorMessage,
   });
 
-  factory ApiError.fromJson(final Map<String, dynamic> data) =>
-      _$ApiErrorFromJson(data);
+  factory ApiError.fromJson(final Map<String, dynamic> data) => ApiError(
+        statusCode: (data['error_code'] as num).toInt(),
+        apiErrorMessage: data['description'] as String,
+      );
 
   CustomError get customError {
     return statusCode == 400
