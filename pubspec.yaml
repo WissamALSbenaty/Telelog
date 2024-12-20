@@ -13,6 +13,11 @@ topics:
 platforms:
   android:
   ios:
+  windows:
+  linux:
+  web:
+  macos:
+
 environment:
   sdk: ^3.6.0
   flutter: ">=1.17.0"
