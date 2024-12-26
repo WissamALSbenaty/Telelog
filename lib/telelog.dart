@@ -14,10 +14,10 @@ class Telelog {
   static final Telelog _instance = Telelog._internal();
 
   /// Logger instance used for local debugging.
-  final Logger logger = Logger(printer: SimplePrinter());
+  final Logger _logger = Logger(printer: SimplePrinter());
 
   /// HTTP client used for sending requests to the Telegram API.
-  late IHttpClient httpClient;
+  late IHttpClient _httpClient;
 
   /// Telegram bot API token.
   late String _apiToken;
@@ -28,7 +28,7 @@ class Telelog {
   /// Private constructor for the singleton pattern.
   Telelog._internal() {
     configureDependencies();
-    httpClient = getIt<IHttpClient>();
+    _httpClient = getIt<IHttpClient>(instanceName: 'HttpClientTelelog');
   }
 
   /// Returns the singleton instance of `Telelog`.
@@ -71,7 +71,7 @@ $parametersString
 
     for (String userId in _usersIds) {
       try {
-        httpClient.sendRequest(
+        _httpClient.sendRequest(
           requestType: RequestMethod.post,
           url: 'https://api.telegram.org/bot$_apiToken/sendMessage',
           parameters: {
@@ -80,7 +80,7 @@ $parametersString
           },
         );
       } catch (e) {
-        logger.w('[Telelog]:: error when sending message with error $e');
+        _logger.w('[Telelog]:: error when sending message with error $e');
       }
     }
   }

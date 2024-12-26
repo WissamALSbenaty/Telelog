@@ -53,9 +53,6 @@ Telelog.instance.i(message: 'Hello World', parameters: {
 
 the package has several logging levels to helps you differentiate the log type 
 
-### Logging Methods
-### Logging Methods
-
 | **Level**  | **Method**                             | **Alternative**          |
 |:----------:|----------------------------------------|--------------------------|
 | **Debug**  | `Telelog.instance.d`                  | `Telelog.instance.debug` |

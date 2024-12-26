@@ -1,9 +1,7 @@
 import 'package:dio/dio.dart';
-import 'package:injectable/injectable.dart';
 import 'package:telelog/src/enums.dart';
 import 'package:telelog/src/third_parties_modules/abstract/i_http_requestor_module.dart';
 
-@Singleton(as: IHttpRequestorModule)
 class HttpRequestorModule extends IHttpRequestorModule {
   final Dio _dio = Dio();
   HttpRequestorModule() {

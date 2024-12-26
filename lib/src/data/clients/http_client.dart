@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-import 'package:injectable/injectable.dart';
 import 'package:telelog/src/data/clients/i_http_client.dart';
 import 'package:telelog/src/data/errors/api_error.dart';
 import 'package:telelog/src/data/errors/core_errors.dart';
@@ -7,7 +6,6 @@ import 'package:telelog/src/enums.dart';
 import 'package:telelog/src/third_parties_modules/abstract/i_http_requestor_module.dart';
 import 'package:telelog/src/third_parties_modules/abstract/i_internet_connection_module.dart';
 
-@Singleton(as: IHttpClient)
 class HttpClient extends IHttpClient {
   final IHttpRequestorModule httpRequestorModule;
   final IInternetConnectionModule internetConnectionModule;

@@ -1,16 +1,12 @@
 import 'dart:async';
 
 import 'package:connectivity_plus/connectivity_plus.dart';
-import 'package:injectable/injectable.dart';
 import 'package:telelog/src/third_parties_modules/abstract/i_internet_connection_module.dart';
 
-@module
 abstract class ConnectivityPackage {
-  @singleton
   Connectivity get connectivity;
 }
 
-@Singleton(as: IInternetConnectionModule)
 class InternetConnectionModule extends IInternetConnectionModule {
   bool isConnectedToInternet = true;
   late StreamSubscription<List<ConnectivityResult>> connectionStream;
@@ -34,7 +30,6 @@ class InternetConnectionModule extends IInternetConnectionModule {
           .listen((final _) => listener(hasInternetConnection));
 
   @override
-  @disposeMethod
   void dispose() {
     connectionStream.cancel();
     super.dispose();
