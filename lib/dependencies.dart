@@ -18,7 +18,7 @@ void configureDependencies() {
     InternetConnectionModule(
         getIt<Connectivity>(instanceName: 'ConnectivityTelelog')),
     instanceName: 'InternetConnectionModuleTelelog',
-    dispose: (i) => i.dispose(),
+    dispose: (final i) => i.dispose(),
   );
   getIt.registerSingleton<IHttpRequestorModule>(HttpRequestorModule(),
       instanceName: 'HttpRequestorModuleTelelog');

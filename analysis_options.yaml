@@ -61,7 +61,6 @@ linter:
     file_names: true
     avoid_void_async: true
     prefer_final_fields: true
-    super_goes_last: true
     unawaited_futures: true
     prefer_final_parameters: true
     unnecessary_brace_in_string_interps: true
